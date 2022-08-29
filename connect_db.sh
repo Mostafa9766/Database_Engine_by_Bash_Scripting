@@ -1,5 +1,6 @@
 #!/bin/bash
 source db_colours.sh #all  ANSI code color and font format stored in db_colours.sh
+PS3="O&M_DB>>"
 #regex='[+*.-_{}$><|:;@-\^(/)=^#!~&`"]'
 #regex='[+*-/]';
 echo -e "${yellow}--------- Database Connect--------${none}"
@@ -15,6 +16,8 @@ done
 if [ -d ./Databases/$dbname ]
 then
 	cd Databases/$dbname
+	PS3="O&M_DB>>$dbname>> "
+
     echo "you just connected to the database $dbname"
     select choice in "create table" "List table" "Drop table" "Insert into table" "Select from table" "Show table" "Delete from table" "Update table" "Back to main menu" "Exit"
 do 
@@ -48,7 +51,7 @@ do
         "Update table")
 		
         ;;       
-        "Back to main")
+        "Back to main menu")
             cd ../../
             . ./db_menu.sh   
             ;;
