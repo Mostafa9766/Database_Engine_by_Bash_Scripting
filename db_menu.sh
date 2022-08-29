@@ -14,7 +14,7 @@ select choice in "Create Database" "List Database" "Connect Database" "Drop Data
 do 
 	case $choice in 
 		"Create Database")
-			. ./create_db.sh
+			. ./creat_db.sh
 			;;
 		"List Database")
                         . ./list_db.sh
