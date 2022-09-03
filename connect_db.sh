@@ -23,33 +23,33 @@ then
 do 
     case $choice in 
         "create table")
-		 
+	. ../../createtable.sh	 
 	;;
 	"List table") 
 		ls 
         ;;
 	 "Drop table")
-     		
+	. ../../droptable.sh
         ;;
 
  	"Insert into table")
-			
+	. ../../insert.sh		
         ;;
 
         "Select from table")
-
+        . ../../selectfromtable.sh
         ;;
 
         "Show table")
-               
+	 . ../../showtable.sh       
         ;;    
 
         "Delete from table")
+        . ../../deletefromtable.sh
 		
         ;;        
-
         "Update table")
-		
+	. ../../update.sh
         ;;       
         "Back to main menu")
             cd ../../
